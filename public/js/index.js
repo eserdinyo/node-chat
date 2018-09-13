@@ -9,5 +9,29 @@ socket.on('disconnect', function () {
 });
 
 socket.on('newMessage', function (message) {
-    console.log(message);
+
+
+    $("#messages").append(`
+    <div class="message-box">
+    <div class="message-time">${message.from}</div>
+    <div class="message-content out">
+      <p>
+        ${message.text}
+      </p>
+    </div>
+  </div>
+    `);
+
+    $('[name=message]').val("");
 });
+
+jQuery('#message-form').on('submit', (e) => {
+    e.preventDefault();
+
+    socket.emit('createMessage', {
+        from: 'User',
+        text: jQuery('[name=message]').val(),
+    }, () => {
+
+    })
+})
