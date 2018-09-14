@@ -7,37 +7,38 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Loop 1 - Step 4</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
-  <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="./assets/css/styles.css" />
 </head>
 
-<body>
-  <div class="main-box">
-    <div class="box-header">
-      <div class="dot">
+<body class="chat">
 
-      </div>
-      <div class="user-name">Mark Zuckerberg</div>
-      <div class="close-btn">&#x2716;</div>
-    </div>
-    <div class="box-content">
-      <div class="messages" id="messages">
+  <div class="chat__sidebar">
+    <h3>People</h3>
+    <div id="users"></div>
+  </div>
 
-      </div>
-      <div class="bottom">
-        <form class="msg-input" id="message-form">
-          <input class="input" name="message" type="text" placeholder="Enter your message">
-          <button class="send-btn">Send</button>
-        </form>
-        <button class="send-btn" id="send-location">
-          <img class="locaiton-img" src="./assets/location.png" alt="Location">
-        </button>
-      </div>
+  <div class="chat__main">
+    <ol id="messages" class="chat__messages"></ol>
+
+    <div class="chat__footer">
+      <form action="" id="message-form">
+        <input type="text" placeholder="enter message" name="message" autofocus autocomplete="off">
+        <button>Send</button>
+      </form>
+
+      <button id="send-location">Send Location</button>
     </div>
 
 
-    <script src="/socket.io/socket.io.js"></script>
-    <script src="./js/libs/jquery.min.js"></script>
-    <script src="js/index.js"></script>
+  </div>
+
+
+
+
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="./js/libs/jquery.min.js"></script>
+  <script src="js/index.js"></script>
 </body>
 
 </html>
