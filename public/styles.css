@@ -180,6 +180,7 @@ body {
     padding-top: 10px;
     display: flex;
     margin-top: auto;
+    width: 100%;
 }
 
 .input {
@@ -202,5 +203,24 @@ body {
     background: none;
     border: none;
     outline: none;
-    margin-left: 5px;
+    margin: 0 5px;
+}
+
+.locaiton-img {
+    width: auto;
+    height: 15px;
+    margin-right: 5px;
+}
+
+.bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.my-location {
+    color: #000;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
 }
